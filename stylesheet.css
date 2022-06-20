@@ -2,15 +2,14 @@ body{
     background-color: #DAF7A6;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-h1{
-    text-align: center;
-}
+
 .linkMeal{
     float: left;
     margin-left: 75px;
 }
+
 .linkTrack{
-    float: right;
+    float: left;
     margin-right: 75px;
 }
 
@@ -35,4 +34,86 @@ a:link {
     color: darkolivegreen;
     background-color: transparent;
     text-decoration:double
+  }
+
+  .header{
+    height: relative ;
+    width: 100%;
+    background: lightgreen;
+    position: relative;
+
+  }
+
+  nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo{
+    width: 75px;
+  }
+
+  .nav_links{
+    padding: 20px 0;
+
+  }
+
+  .nav_links li{
+    display: inline-block;
+    margin: 0 20px;
+  }
+
+  .nav_links li a{
+    text-decoration: none;
+    color: green;
+    padding: 5px 0;
+    position: relative;
+
+  }
+
+  .nav_links li a::after{
+    content: '';
+    background: #DAF7A6;
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s;
+  }
+
+  .nav_links li a:hover::after{
+    width: 100%;
+  }
+
+  .booton{
+    color: green;
+    background: #DAF7A6;
+    padding: 10px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 90%;
+    max-width: 900px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .content h1{
+    font-size: 65px;
+    font-weight: 125;
+    margin-bottom: 50px;
+  }
+
+  .content form{
+    background: green;
+    padding: 10px;
+    border-radius: 200px;
+    display: flex;
   }
