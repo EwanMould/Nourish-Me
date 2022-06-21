@@ -113,7 +113,26 @@ a:link {
 
   .content form{
     background: green;
-    padding: 10px;
-    border-radius: 200px;
+    padding: 20px;
+    border-radius: 30px;
     display: flex;
+  }
+
+  .content form input{
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-size: 25px;
+  }
+
+  .content form button{
+    background: #DAF7A6;
+    color: green;
+    padding: 2% 3%;
+    font-size: 17px;
+    border: #DAF7A6;
+    border-radius: 2%;
+
+    
   }
