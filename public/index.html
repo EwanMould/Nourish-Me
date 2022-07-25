@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Nourish-Me</title>
+        <meta name="description" content="This is a nutrition website for people who wanting to lose, gain or maintain weight or for someone who is wanting to try new meals while also being a health tracker.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+
+    </head>
+    <body>
+        <div class="header">
+            <nav> 
+                <a href="#"><img  src="media/nutrition-icon.png" class="logo"></a>
+                <ul class ="nav_links">
+                    <li><a href = "Meals.html" >Meal Curator</a> </li>
+                    <li><a href = "Pantry.html" >Pantry </a> </li>
+                    <li><a href = "Tracking.html" > Nutrition Tracker</a> </li>
+                    <li class = "booton"> <a href="Sign_In.html"> Sign In</a> </li>
+                </ul>
+            </nav>
+        </div>
+          
+        <div class="content">
+            <h1>Your cooking worries are <strong>over</strong> </h1>
+            <form>
+                <input type = "text" placeholder=" Enter Key Ingredient">
+                <button type = "submit">Search Meals</button> 
+            </form>
+        </div>
+
+
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries 
+
+          
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+              apiKey: "AIzaSyAklEugOtB5QSk1JUOlX3WuO01JgeRo_DQ",
+              authDomain: "nourish-me-e8cf8.firebaseapp.com",
+              projectId: "nourish-me-e8cf8",
+              storageBucket: "nourish-me-e8cf8.appspot.com",
+              messagingSenderId: "305238771236",
+              appId: "1:305238771236:web:e8077254e977618b977ab1",
+              measurementId: "G-NCZ7FK98F5"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+        </script>
+        <script src="script.js" async defer></script>
+        <script src="app.js" defer></script>
+    </body>
+</html>

@@ -3,6 +3,10 @@ body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+strong{
+  font-weight: 250;
+}
+
 .linkMeal{
     float: left;
     margin-left: 75px;
@@ -44,14 +48,18 @@ a:link {
 
   }
 
+  .logo{
+    width: 75px;
+  }
+
+
+
+
+
   nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-
-  .logo{
-    width: 75px;
   }
 
   .nav_links{
@@ -114,8 +122,9 @@ a:link {
   .content form{
     background: green;
     padding: 20px;
-    border-radius: 30px;
+    border-radius: 20px;
     display: flex;
+    
   }
 
   .content form input{
@@ -133,6 +142,4 @@ a:link {
     font-size: 17px;
     border: #DAF7A6;
     border-radius: 2%;
-
-    
   }
