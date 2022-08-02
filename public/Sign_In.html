@@ -23,7 +23,7 @@
             </nav>
         </div>
 
-        <div class="SignIn-Up_Form">
+            <div class="SignIn-Up_Form">
             <form action="POST" class="form" id = "SignIn">
                 <h1 class = "form__title">Sign In</h1>
                 <div class="FormMessage FormMessage--Error">Incorrect Email/Password combination.</div>
@@ -47,11 +47,61 @@
                     
                 </p>
             </form>
-
-            
-
         </div>
+        <button class="GoogleSignIn" id="Login">Log in with Google </button>
 
+
+
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-analytics.js";
+            import { getAuth, GoogleAuthProvider, signInWithRedirect, getRedirectResult } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-auth.js";
+
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+              apiKey: "AIzaSyAklEugOtB5QSk1JUOlX3WuO01JgeRo_DQ",
+              authDomain: "nourish-me-e8cf8.firebaseapp.com",
+              projectId: "nourish-me-e8cf8",
+              storageBucket: "nourish-me-e8cf8.appspot.com",
+              messagingSenderId: "305238771236",
+              appId: "1:305238771236:web:e8077254e977618b977ab1",
+              measurementId: "G-NCZ7FK98F5"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+            const provider = new GoogleAuthProvider(app);
+            const auth = getAuth(app); 
+
+            Login.addEvenListener('click',(e) => {
+                signInWithRedirect(auth, provider);
+            });
+
+            getRedirectResult(auth)
+            .then((result) => {
+                // This gives you a Google Access Token. You can use it to access Google APIs.
+                const credential = GoogleAuthProvider.credentialFromResult(result);
+                const token = credential.accessToken;
+
+                // The signed-in user info.
+                const user = result.user;
+            }).catch((error) => {
+                // Handle Errors here.
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // The email of the user's account used.
+                const email = error.customData.email;
+                // The AuthCredential type that was used.
+                const credential = GoogleAuthProvider.credentialFromError(error);
+                // ...
+            });
+          </script>
 
         <script src="script.js" async defer></script>
     </body>
